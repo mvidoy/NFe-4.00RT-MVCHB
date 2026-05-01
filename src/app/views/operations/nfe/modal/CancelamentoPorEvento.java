@@ -397,7 +397,7 @@ public class CancelamentoPorEvento extends javax.swing.JInternalFrame {
                         .addGap(210, 210, 210)
                         .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 365, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
                 .addComponent(jButton1))
             .addGroup(jDesktopPane2Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
@@ -445,8 +445,8 @@ public class CancelamentoPorEvento extends javax.swing.JInternalFrame {
                     .addComponent(tf_nseqevento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9))
@@ -463,7 +463,7 @@ public class CancelamentoPorEvento extends javax.swing.JInternalFrame {
                 .addGap(5, 5, 5)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE))
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
         );
 
         botao_sair.setMnemonic('L');
@@ -547,6 +547,21 @@ public class CancelamentoPorEvento extends javax.swing.JInternalFrame {
         try {
             ProcessaToken.processaTokenBradesco();
             ProcessaToken.processaTokenSantander();
+
+            // Verifica se a NF-e possui duplicatas no banco; se sim, confere se a planilha está acessível
+            String numeroFormatado = String.format("%06d", Integer.parseInt(gNNF.trim()));
+            List<CANFEDUPLICdto> duplicatas = CANFEDUPLICcontroller.NamedQueryFindAllNota(numeroFormatado);
+            if (duplicatas != null && !duplicatas.isEmpty()) {
+                try (java.io.FileOutputStream testStream = new java.io.FileOutputStream(planPrevcaixa, true)) {
+                    // OK — arquivo não bloqueado, prossegue
+                } catch (java.io.IOException lockEx) {
+                    javax.swing.JOptionPane.showMessageDialog(this,
+                            "A planilha prevcaixa.xls está aberta.\nFeche o Excel e tente novamente.",
+                            "Planilha bloqueada", javax.swing.JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+            }
+
             Process process = new Process();
             process.start();
         } catch (java.lang.Exception ex) {

@@ -4,7 +4,7 @@ public class env {
 
     private final String EMITENTE_DEFAULT = "01";
     private final String EMITENTE_CNPJ_DEFAULT = "52.703.063/0001-08";
-    private final String HOST = "192.168.0.3";
+    private final String HOST = "192.168.0.5";
     private final String PORT = "3333";
     private final String NODE_ENV = "development";
     private final String APP_NAME = "NFe-4.00RT";

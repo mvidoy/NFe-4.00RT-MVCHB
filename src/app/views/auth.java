@@ -344,7 +344,7 @@ public class auth extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        setSize(new java.awt.Dimension(274, 299));
+        setSize(new java.awt.Dimension(274, 325));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -602,7 +602,7 @@ public class auth extends javax.swing.JFrame {
                     } finally {
                         jButton3.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
                         // Mostra uma imagem com o título da aplicação
-                        System.setProperty("tpAmb", "1");
+                        System.setProperty("tpAmb", "2");
                         System.setProperty("pathCertificadoBradescoPfx", ServicosBradescoEnum.getCertificadoPath());
                         System.setProperty("passwordBradescoPfx", ServicosBradescoEnum.getCertificadoSenha());
                         System.setProperty("pathCertificadoSantanderPfx", ServicosSantanderEnum.getCertificadoPath());
