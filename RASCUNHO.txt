@@ -1,0 +1,236 @@
+Private Sub CalculaValordaNota()
+    On Error GoTo ErrCalculaValordaNota
+
+    ' Declaração de variáveis
+    Dim www_bsip As Variant
+    Dim www_vlip As Double
+    Dim www_vlic As Variant
+    Dim ttt_vlip As Double
+    Dim www_vlno As Double
+    Dim www_vlpr As Double
+    Dim www_bsic As Double
+    Dim www_basepis As Double
+    Dim www_valorpis As Double
+    Dim www_basecofins As Double
+    Dim www_valorcofins As Double
+    Dim ttt_valorpis As Double
+    Dim ttt_valorcofins As Double
+    Dim www_peso As Double
+    Dim www_NQTD As Double
+    Dim www_NPRU As Double
+    Dim www_alip As Double
+    Dim J As Integer
+
+    ' Inicialização de variáveis
+    www_vlno = 0#
+    www_vlpr = 0#
+    www_bsip = 0#
+    www_bsic = 0#
+    www_vlip = 0#
+    www_basepis = 0#
+    www_valorpis = 0#
+    www_basecofins = 0#
+    www_valorcofins = 0#
+    ttt_vlip = 0#
+    ttt_valorpis = 0#
+    ttt_valorcofins = 0#
+    www_peso = 0#
+
+    ' Obtém o número do pedido e carrega os itens do pedido
+    wtl_pedi.Text = Format(CopedvenRS("PED_CODI"), "000000")
+    gSQL = "SELECT * FROM caiteped WHERE ite_codi = '" & wtl_pedi.Text & "';"
+    Set CoitepedRS = New Recordset
+    CoitepedRS.Open gSQL, db, adOpenDynamic, adLockReadOnly
+
+    ' Loop para calcular valores dos itens do pedido
+    Do While Not CoitepedRS.EOF
+        If IsNumeric(CoitepedRS("ITE_NQTD")) Then
+            www_peso = www_peso + CoitepedRS("ITE_NQTD")
+        End If
+
+        If IsNumeric(CoitepedRS("ITE_NQTD")) And IsNumeric(CoitepedRS("ITE_NPRU")) Then
+            www_vlno = www_vlno + (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU"))
+
+            ' Calcula IPI
+            If IsNumeric(CoitepedRS("ITE_ALIP")) Then
+                www_NQTD = CoitepedRS("ITE_NQTD")
+                www_NPRU = CoitepedRS("ITE_NPRU")
+                If IsNumeric(CoitepedRS("ITE_ALIP")) Then
+                    www_alip = CoitepedRS("ITE_ALIP") / 100
+                End If
+                www_bsic = www_bsic + (www_NQTD * www_NPRU)
+                ttt_vlip = FormatNumber((www_NQTD * www_NPRU) * www_alip, 2)
+                www_vlip = www_vlip + ttt_vlip
+            End If
+
+            ' Calcula PIS
+            www_NQTD = CoitepedRS("ITE_NQTD")
+            www_NPRU = CoitepedRS("ITE_NPRU")
+            www_basepis = www_basepis + (www_NQTD * www_NPRU)
+            ttt_valorpis = FormatNumber((www_NQTD * www_NPRU) * 0.0165, 2)
+            www_valorpis = www_valorpis + ttt_valorpis
+
+            ' Calcula COFINS
+            www_basecofins = www_basecofins + (www_NQTD * www_NPRU)
+            ttt_valorcofins = FormatNumber((www_NQTD * www_NPRU) * 0.076, 2)
+            www_valorcofins = www_valorcofins + ttt_valorcofins
+        End If
+
+        CoitepedRS.MoveNext
+    Loop
+
+    ' Ajustes de valores
+    wtl_alic = 0
+    www_vlpr = www_vlno
+
+    If IsNumeric(wtl_vlfr.Text) Then
+        www_bsic = www_bsic + wtl_vlfr.Text
+        www_vlno = www_vlno + wtl_vlfr.Text
+    End If
+
+    ' Obtém informações do cliente e estado para cálculo do ICMS
+    gSQL = "SELECT * FROM caclient WHERE cli_codi = '" & CopedvenRS("PED_CCLI") & "';"
+    Set CoclientRS = New Recordset
+    CoclientRS.Open gSQL, db, adOpenDynamic, adLockReadOnly
+
+    If Not CoclientRS.EOF Then
+        Set CoestadoRS = New Recordset
+        gSQL = "SELECT * FROM caestado WHERE est_sigl = '" & CoclientRS("cli_esta") & "'"
+        CoestadoRS.Open gSQL, db, adOpenDynamic, adLockReadOnly
+
+        If Not CoestadoRS.EOF Then
+            If IsNumeric(CoestadoRS("EST_AICM")) Then
+                wtl_alic = CoestadoRS("EST_AICM")
+                www_vlic = FormatNumber(www_vlno * (wtl_alic / 100), 2)
+            End If
+        End If
+    End If
+
+    ' Cria ou atualiza itens da nota fiscal
+    If Val(wtl_pedi.Text) > 0 Then
+        Call procuratabela(gsopera & "_canfeitenot")
+        gSQL = "CREATE TABLE " & gsopera & "_canfeitenot" & " AS SELECT * FROM canfeitenot WHERE inf_codi = '" & wtl_nota.Text & "';"
+        db.Execute gSQL
+
+        gSQL = "SELECT inf_sequ, inf_desc, inf_clfi, inf_sitr, inf_unid, inf_qtde, inf_prun, inf_vlto, inf_baseicms, inf_alic, inf_vlic, inf_ipicst, inf_baseipi, inf_alip, inf_vlip, inf_piscst, inf_basepis, inf_alpis, inf_valorpis, inf_cofinscst, inf_basecofins, inf_alcofins, inf_valorcofins, inf_oper, inf_icmsnaotributado, inf_icmsnaocreditado, inf_ipinaotributado, inf_ipinaocreditado, inf_codi, inf_clie, inf_dten, inf_dtef, inf_item FROM " & gsopera & "_canfeitenot" & " where INF_CODI = '" & wtl_nota.Text & "'"
+        Set CoitenotRS = New Recordset
+        CoitenotRS.Open gSQL, db, adOpenDynamic, adLockOptimistic
+
+        If CoitenotRS.RecordCount > 0 Then
+            CoitenotRS.MoveFirst
+        End If
+
+        Do While Not CoitenotRS.EOF
+            CoitenotRS.Delete
+            CoitenotRS.MoveNext
+        Loop
+
+        J = 1
+
+        If CoitepedRS.RecordCount > 0 Then
+            CoitepedRS.MoveFirst
+
+            Do While Not CoitepedRS.EOF
+                Set CoprodutRS = New Recordset
+                gSQL = "SELECT * FROM caprodut WHERE p_codpro = '" & Format(CoitepedRS("ite_sequ"), "000000") & "';"
+                CoprodutRS.Open gSQL, db, adOpenDynamic, adLockReadOnly
+
+                If Not CoprodutRS.EOF Then
+                    gSQL = "SELECT * FROM cagrupos WHERE gru_codi = '" & CoprodutRS("p_codgru") & "';"
+                    Set CogruposRS = New Recordset
+                    CogruposRS.Open gSQL, db, adOpenDynamic, adLockReadOnly
+                End If
+
+                If IsNumeric(CoitepedRS("ITE_NQTD")) Then
+                    If CoitepedRS("ITE_NQTD") > 0 Then
+                        CoitenotRS.AddNew
+                        CoitenotRS("inf_item") = Format(J, "00")
+                        CoitenotRS("inf_codi") = Format(wtl_nota.Text, "000000")
+                        CoitenotRS("INF_QTDE") = CoitepedRS("ITE_NQTD")
+                        CoitenotRS("INF_PRUN") = CoitepedRS("ITE_NPRU
+                        CoitenotRS("INF_VLTO") = CDbl(CoitepedRS("ITE_NPRU") * CoitepedRS("ITE_NQTD"))
+                        CoitenotRS("INF_SEQU") = CoitepedRS("ITE_SEQU")
+                        CoitenotRS("INF_DESC") = CoprodutRS("P_FANTAS")
+                        CoitenotRS("INF_CLFI") = CogruposRS("GRU_CLFI")
+                        CoitenotRS("INF_SITR") = CoitepedRS("ITE_SITR")
+                        CoitenotRS("INF_UNID") = CoitepedRS("ITE_UNID")
+                        CoitenotRS("INF_BASEICMS") = IIf(IsNull(wtl_alic), 0, IIf(wtl_alic > 0, (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")), 0))
+                        CoitenotRS("INF_IPICST") = "50"
+                        CoitenotRS("INF_BASEIPI") = IIf(IsNull(CoitepedRS("ITE_ALIP")), 0, IIf(CoitepedRS("ITE_ALIP") > 0, (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")), 0))
+                        CoitenotRS("INF_ALIC") = wtl_alic
+                        CoitenotRS("INF_ALIP") = CoitepedRS("ITE_ALIP")
+                        CoitenotRS![INF_VLIC] = CDbl((CoitenotRS![INF_BASEICMS] * (CoitenotRS![INF_ALIC] / 100)))
+                        CoitenotRS![INF_VLIP] = CDbl((CoitenotRS![INF_BASEIPI] * (CoitenotRS![INF_ALIP] / 100)))
+
+                        CoitenotRS("INF_PISCST") = "01"
+                        CoitenotRS("INF_BASEPIS") = (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")) '20/04/2023
+                        'CoitenotRS("INF_BASEPIS") = (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")) - CoitenotRS![INF_VLIC]  '20/04/2023 - Medida Provisória nº 1.159/2023
+                        CoitenotRS("INF_COFINSCST") = "01"
+                        CoitenotRS("INF_BASECOFINS") = (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")) '20/04/2023
+                        'CoitenotRS("INF_BASECOFINS") = (CoitepedRS("ITE_NQTD") * CoitepedRS("ITE_NPRU")) - CoitenotRS![INF_VLIC]  '20/04/2023 - Medida Provisória nº 1.159/2023
+                        CoitenotRS("INF_COFINSCST") = "01"
+                        CoitenotRS("INF_ALPIS") = 1.65
+                        CoitenotRS("INF_ALCOFINS") = 7.6
+                        CoitenotRS![INF_VALORPIS] = CDbl((CoitenotRS![INF_BASEPIS] * (CoitenotRS![INF_ALPIS] / 100)))
+                        CoitenotRS![INF_VALORCOFINS] = CDbl((CoitenotRS![INF_BASECOFINS] * (CoitenotRS![INF_ALCOFINS] / 100)))
+
+                        CoitenotRS![INF_OPER] = IIf(Val(wtl_oper) > 0, wtl_oper, "")
+                        CoitenotRS.Update
+                        J = J + 1
+                    End If
+                End If
+                CoitepedRS.MoveNext
+            Loop
+        End If
+        Call Carrega_grdDataGrid
+    End If
+
+    ' Ajustes finais e exibição de valores
+    If Not IsNumeric(wtl_vlda.Text) Then
+        wtl_vlda.Text = 0#
+    End If
+    If Not IsNumeric(wtl_vlse.Text) Then
+        wtl_vlse.Text = 0#
+    End If
+    If Not IsNumeric(wtl_vlfr.Text) Then
+        wtl_vlfr.Text = 0#
+    End If
+
+    If www_vlip > 0 Then
+        www_bsip = www_bsic
+    Else
+        www_bsip = 0
+    End If
+
+    If www_vlip <= 0 Then
+        www_bsip = 0#
+    End If
+
+    If www_vlic <= 0 Then
+        www_bsic = 0#
+    End If
+
+    www_vlno = www_vlno + wtl_vlda.Text + wtl_vlse.Text + www_vlip
+    wtl_vlto(0).Text = Format(www_vlno, "R$ 0.00")
+    wtl_vlto(1).Text = Format(www_vlno, "0.00")
+    wtl_vlpr.Text = Format(www_vlpr, "0.00")
+    wtl_vlno.Text = Format(www_vlno, "0.00")
+    wtl_bsic.Text = Format(www_bsic, "0.00")
+    wtl_vlip.Text = Format(www_vlip, "0.00")
+    wtl_vlic.Text = Format(www_vlic, "0.00")
+    wtl_pbru.Text = Format(www_peso, "0.000")
+    wtl_pliq.Text = Format(www_peso, "0.000")
+    wtl_basepis.Text = Format(www_basepis, "0.00")
+    wtl_valorpis.Text = Format(www_valorpis, "0.00")
+    wtl_basecofins.Text = Format(www_basecofins, "0.00")
+    wtl_valorcofins.Text = Format(www_valorcofins, "0.00")
+
+    'Call CConotfisRS_Reposition
+
+    Exit Sub
+
+ErrCalculaValordaNota:
+    Erro gMensagem
+    Exit Sub
+
+End Sub

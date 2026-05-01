@@ -1,0 +1,57 @@
+Guia de Desenvolvimento de Serviços
+
+Este documento fornece diretrizes para o desenvolvimento e manutenção dos serviços na aplicação, com foco em gerenciamento de conexões, customizações do Hibernate, e práticas recomendadas.
+1. Estrutura Geral
+
+1.1 Pacote:
+Todos os serviços estão organizados no pacote com.md1.backend.services. Isso garante uma estrutura modular e facilita a localização e manutenção dos serviços.
+
+1.2 Responsabilidade:
+Os serviços são responsáveis por gerenciar operações que envolvem lógica de negócios complexa, conexões com o banco de dados, e customizações de frameworks (como Hibernate). Eles atuam como a camada intermediária entre os controladores e os DAOs.
+2. Gerenciamento de Conexões
+
+2.1 ConnectionFactory.java:
+Esta classe é responsável por gerenciar as conexões com o banco de dados. Ela deve garantir que as conexões sejam criadas, gerenciadas e fechadas corretamente para evitar vazamentos de conexões.
+
+    Práticas Recomendadas:
+        Sempre fechar as conexões após o uso para evitar vazamento de memória.
+        Utilizar try-with-resources para garantir que as conexões sejam fechadas automaticamente.
+        Centralizar a criação de conexões nesta classe para facilitar a manutenção e a aplicação de mudanças futuras.
+
+2.2 Conection.java:
+Outra classe relacionada ao gerenciamento de conexões. Certifique-se de que esta classe complementa ou estende as funcionalidades do ConnectionFactory de forma consistente.
+3. Customizações do Hibernate
+
+3.1 HibernateInterceptor.java:
+Este interceptor é utilizado para modificar o comportamento padrão do Hibernate durante operações de persistência. Pode ser utilizado para adicionar funcionalidades como auditoria, validação, ou manipulação de dados antes de persistir.
+
+    Práticas Recomendadas:
+        Documentar claramente as modificações feitas pelo interceptor para facilitar a compreensão e manutenção.
+        Garantir que o interceptor seja aplicado apenas nas operações onde é necessário, evitando sobrecarga desnecessária.
+
+3.2 MyNamingStrategy.java, PersonTableNameReplacer.java, TableNameReplacer.java:
+Essas classes são utilizadas para personalizar a estratégia de nomeação de tabelas e colunas no banco de dados. Elas permitem adaptar os nomes gerados pelo Hibernate para atender a requisitos específicos.
+
+    Práticas Recomendadas:
+        Usar essas estratégias de forma consistente em todo o projeto para garantir que a nomeação de tabelas e colunas siga um padrão unificado.
+        Documentar quaisquer regras ou convenções de nomeação específicas que sejam aplicadas através dessas classes.
+
+4. Práticas Recomendadas
+
+4.1 Tratamento de Exceções:
+Todos os serviços devem implementar um tratamento robusto de exceções, garantindo que erros sejam logados e que a aplicação possa reagir adequadamente sem comprometer a integridade dos dados.
+
+    Sugestão: Centralizar o tratamento de exceções comuns para evitar duplicação de código.
+
+4.2 Reutilização de Código:
+Sempre que possível, reutilize métodos e classes já existentes para evitar duplicação de lógica. Isso é especialmente importante ao lidar com conexões e transações.
+
+4.3 Testes e Validação:
+Garantir que todos os serviços sejam cobertos por testes automatizados. Isso inclui testes unitários para validar a lógica de negócios e testes de integração para verificar o funcionamento com outros componentes do sistema.
+5. Documentação e Manutenção
+
+5.1 Documentação de Código:
+Todo o código dentro dos serviços deve ser bem documentado, com comentários claros explicando a finalidade de métodos complexos e qualquer lógica de negócios importante.
+
+5.2 Atualização do Guia:
+Este guia deve ser revisado e atualizado conforme novos padrões ou práticas forem introduzidos no projeto. Todos os desenvolvedores devem seguir as diretrizes aqui estabelecidas para garantir a consistência e qualidade do código.

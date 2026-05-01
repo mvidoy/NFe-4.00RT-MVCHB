@@ -1,0 +1,101 @@
+18/11/25 16:12:12 - E-mail enviado com sucesso para mvidoy@hotmail.com
+18/11/25 16:12:12 - Boleto apagado: DANFE_070340.pdf
+18/11/25 16:12:12 - Boleto apagado: XML_070340.xml
+18/11/25 16:12:33 - E-mail enviado com sucesso para mvidoy@hotmail.com
+18/11/25 16:12:33 - Boleto apagado: DANFE_070341.pdf
+18/11/25 16:12:33 - Boleto apagado: XML_070341.xml
+18/11/25 16:13:53 - E-mail enviado com sucesso para mvidoy@hotmail.com
+18/11/25 16:13:53 - Boleto apagado: DANFE_070346.pdf
+18/11/25 16:13:53 - Boleto apagado: XML_070346.xml
+18/11/25 16:14:36 - E-mail enviado com sucesso para mvidoy@hotmail.com
+18/11/25 16:14:36 - Boleto apagado: DANFE_070344.pdf
+18/11/25 16:14:36 - Boleto apagado: XML_070344.xml
+19/11/25 10:29:14 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 10:29:14 - Boleto apagado: DANFE_070355.pdf
+19/11/25 10:29:14 - Boleto apagado: XML_070355.xml
+19/11/25 10:29:38 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 10:29:38 - Boleto apagado: DANFE_070356.pdf
+19/11/25 10:29:38 - Boleto apagado: XML_070356.xml
+19/11/25 10:39:14 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 10:39:14 - Boleto apagado: DANFE_070358.pdf
+19/11/25 10:39:14 - Boleto apagado: XML_070358.xml
+19/11/25 16:24:34 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 16:24:34 - Boleto apagado: DANFE_070361.pdf
+19/11/25 16:24:34 - Boleto apagado: XML_070361.xml
+19/11/25 16:24:51 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 16:24:51 - Boleto apagado: DANFE_070362.pdf
+19/11/25 16:24:51 - Boleto apagado: XML_070362.xml
+19/11/25 16:27:26 - E-mail enviado com sucesso para mvidoy@hotmail.com
+19/11/25 16:27:26 - Boleto apagado: DANFE_070362.pdf
+19/11/25 16:27:26 - Boleto apagado: XML_070362.xml
+24/11/25 08:21:17 - E-mail enviado com sucesso para mvidoy@hotmail.com
+24/11/25 08:21:17 - Boleto apagado: DANFE_070374.pdf
+24/11/25 08:21:17 - Boleto apagado: XML_070374.xml
+24/11/25 08:21:33 - E-mail enviado com sucesso para mvidoy@hotmail.com
+24/11/25 08:21:33 - Boleto apagado: DANFE_070375.pdf
+24/11/25 08:21:33 - Boleto apagado: XML_070375.xml
+24/11/25 08:21:59 - E-mail enviado com sucesso para mvidoy@hotmail.com
+24/11/25 08:21:59 - Boleto apagado: DANFE_070376.pdf
+24/11/25 08:21:59 - Boleto apagado: XML_070376.xml
+24/11/25 08:24:00 - E-mail enviado com sucesso para mvidoy@hotmail.com
+24/11/25 08:24:00 - Boleto apagado: DANFE_070382.pdf
+24/11/25 08:24:00 - Boleto apagado: XML_070382.xml
+01/12/25 16:58:26 - E-mail enviado com sucesso para contato@franbrasilindustria.com.br
+01/12/25 16:58:26 - Boleto apagado: DANFE_070463.pdf
+01/12/25 16:58:26 - Boleto apagado: XML_070463.xml
+02/12/25 17:27:49 - E-mail enviado com sucesso para faturamento2@camarplasticos.com.br
+02/12/25 17:27:49 - Boleto apagado: DANFE_070485.pdf
+02/12/25 17:27:49 - Boleto apagado: XML_070485.xml
+09/12/25 09:30:45 - E-mail enviado com sucesso para nfe@hiza.com.br
+09/12/25 09:30:45 - Boleto apagado: DANFE_070556.pdf
+09/12/25 09:30:45 - Boleto apagado: XML_070556.xml
+26/01/26 13:37:15 - E-mail enviado com sucesso para contato@franbrasilindustria.com.br
+26/01/26 13:37:15 - Boleto apagado: DANFE_070867.pdf
+26/01/26 13:37:15 - Boleto apagado: XML_070867.xml
+26/01/26 13:37:15 - Registro e Envio da NFe atualizado(s) 
+10/02/26 14:13:13 - E-mail enviado com sucesso para compras@operaaz.com.br
+10/02/26 14:13:13 - Boleto apagado: DANFE_071033.pdf
+10/02/26 14:13:13 - Boleto apagado: XML_071033.xml
+10/02/26 14:13:13 - Registro e Envio da NFe atualizado(s) 
+25/02/26 11:46:27 - E-mail enviado com sucesso para contato@franbrasilindustria.com.br
+25/02/26 11:46:27 - Boleto apagado: DANFE_071189.pdf
+25/02/26 11:46:27 - Boleto apagado: XML_071189.xml
+25/02/26 11:46:27 - Registro e Envio da NFe atualizado(s) 
+25/02/26 11:47:00 - E-mail enviado com sucesso para contato@franbrasilindustria.com.br
+25/02/26 11:47:00 - Boleto apagado: DANFE_071190.pdf
+25/02/26 11:47:00 - Boleto apagado: XML_071190.xml
+25/02/26 11:47:00 - Registro e Envio da NFe atualizado(s) 
+25/02/26 13:35:34 - E-mail enviado com sucesso para vendasalianca_@hotmail.com
+25/02/26 13:35:34 - Boleto apagado: DANFE_071192.pdf
+25/02/26 13:35:34 - Boleto apagado: XML_071192.xml
+25/02/26 13:35:34 - Registro e Envio da NFe atualizado(s) 
+02/03/26 11:19:40 - E-mail enviado com sucesso para juliana.helena@linoplast.com.br
+02/03/26 11:19:40 - Boleto apagado: DANFE_071246.pdf
+02/03/26 11:19:40 - Boleto apagado: XML_071246.xml
+02/03/26 18:34:52 - E-mail enviado com sucesso para JYMTRANSP@GMAIL.COM
+02/03/26 18:34:52 - Boleto apagado: DANFE_071257.pdf
+02/03/26 18:34:52 - Boleto apagado: XML_071257.xml
+02/03/26 18:39:51 - Falha ao enviar e-mail para nfe.monotextil@gmail.com;adm.monotextil@gmail.com;compras.monotextil@gmail.com;everton.honorio@hmx.com.br
+02/03/26 18:40:20 - E-mail enviado com sucesso para comercial@ortopediabrasil.com.br
+02/03/26 18:40:20 - Boleto apagado: DANFE_071254.pdf
+02/03/26 18:40:20 - Boleto apagado: XML_071254.xml
+02/03/26 18:40:44 - E-mail enviado com sucesso para nfe.monotextil@gmail.com;adm.monotextil@gmail.com;compras.monotextil@gmail.com;everton.honorio@hmx.com.br
+02/03/26 18:40:44 - Boleto apagado: DANFE_071259.pdf
+02/03/26 18:40:44 - Boleto apagado: XML_071259.xml
+03/03/26 11:01:14 - E-mail enviado com sucesso para compras@operaaz.com.br
+03/03/26 11:01:14 - Boleto apagado: DANFE_071262.pdf
+03/03/26 11:01:14 - Boleto apagado: XML_071262.xml
+03/03/26 11:01:14 - Boleto apagado: XML_EVENTO_CANCELAMENTO071262.xml
+04/03/26 11:58:04 - E-mail enviado com sucesso para faturamento2@camarplasticos.com.br
+04/03/26 11:58:04 - Boleto apagado: DANFE_071271.pdf
+04/03/26 11:58:04 - Boleto apagado: XML_071271.xml
+20/03/26 10:34:31 - E-mail enviado com sucesso para nfe@plasnew.ind.br; rodrigo.fiscal@plasnew.ind.br; roberto.materiaprima@plasnew.ind.br;elcio@camarplasticos.com.br
+20/03/26 10:34:31 - Boleto apagado: DANFE_071438.pdf
+20/03/26 10:34:31 - Boleto apagado: XML_071438.xml
+20/03/26 10:34:31 - Boleto apagado: XML_EVENTO_CANCELAMENTO071438.xml
+31/03/26 08:22:44 - E-mail enviado com sucesso para nfe@cspcerdas.com.br
+31/03/26 08:22:44 - Boleto apagado: DANFE_071538.pdf
+31/03/26 08:22:44 - Boleto apagado: XML_071538.xml
+14/04/26 11:47:31 - E-mail enviado com sucesso para contato@franbrasilindustria.com.br
+14/04/26 11:47:31 - Boleto apagado: DANFE_071703.pdf
+14/04/26 11:47:31 - Boleto apagado: XML_071703.xml

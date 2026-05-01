@@ -1,0 +1,64 @@
+27/11/25 15:09:56 - E-mail enviado com sucesso para mvidoy@hotmail.com
+27/11/25 15:09:56 - Boleto apagado: DANFE_070437.pdf
+27/11/25 15:09:56 - Boleto apagado: XML_070437.xml
+07/12/25 17:47:40 - E-mail enviado com sucesso para mvidoy@hotmail.com
+07/12/25 17:47:40 - Boleto apagado: DANFE_070528.pdf
+07/12/25 17:47:40 - Boleto apagado: XML_070528.xml
+17/12/25 11:26:34 - E-mail enviado com sucesso para mvidoy@hotmail.com
+17/12/25 11:26:34 - Boleto apagado: DANFE_070619.pdf
+17/12/25 11:26:34 - Boleto apagado: XML_070619.xml
+17/12/25 11:26:34 - Registro e Envio da NFe atualizado(s) 
+17/12/25 13:33:36 - E-mail enviado com sucesso para mvidoy@hotmail.com
+17/12/25 13:33:36 - Boleto apagado: DANFE_070620.pdf
+17/12/25 13:33:36 - Boleto apagado: XML_070620.xml
+17/12/25 13:33:36 - Registro e Envio da NFe atualizado(s) 
+16/01/26 10:44:58 - E-mail enviado com sucesso para mvidoy@hotmail.com
+16/01/26 10:44:58 - Boleto apagado: DANFE_070793.pdf
+16/01/26 10:44:58 - Boleto apagado: XML_070793.xml
+16/01/26 10:44:58 - Registro e Envio da NFe atualizado(s) 
+16/01/26 14:37:24 - E-mail enviado com sucesso para mvidoy@hotmail.com
+16/01/26 14:37:24 - Boleto apagado: DANFE_070794.pdf
+16/01/26 14:37:24 - Boleto apagado: XML_070794.xml
+16/01/26 14:37:24 - Registro e Envio da NFe atualizado(s) 
+20/01/26 15:22:49 - E-mail enviado com sucesso para mvidoy@hotmail.com
+20/01/26 15:22:49 - Boleto apagado: DANFE_070814.pdf
+20/01/26 15:22:49 - Boleto apagado: XML_070814.xml
+20/01/26 15:22:49 - Registro e Envio da NFe atualizado(s) 
+21/01/26 10:49:51 - E-mail enviado com sucesso para mvidoy@hotmail.com
+21/01/26 10:49:51 - Boleto apagado: DANFE_070827.pdf
+21/01/26 10:49:51 - Boleto apagado: XML_070827.xml
+21/01/26 10:49:51 - Registro e Envio da NFe atualizado(s) 
+27/02/26 10:20:37 - E-mail enviado com sucesso para mvidoy@hotmail.com
+27/02/26 10:20:37 - Boleto apagado: DANFE_071227.pdf
+27/02/26 10:20:37 - Boleto apagado: XML_071227.xml
+27/02/26 10:20:37 - Registro e Envio da NFe atualizado(s) 
+28/02/26 18:44:14 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 18:44:14 - Boleto apagado: DANFE_071240.pdf
+28/02/26 18:44:14 - Boleto apagado: XML_071240.xml
+28/02/26 18:49:26 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 18:49:26 - Boleto apagado: DANFE_071241.pdf
+28/02/26 18:49:26 - Boleto apagado: XML_071241.xml
+28/02/26 19:15:13 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 19:15:13 - Boleto apagado: DANFE_071238.pdf
+28/02/26 19:15:13 - Boleto apagado: XML_071238.xml
+28/02/26 19:15:13 - Boleto apagado: XML_EVENTO_CANCELAMENTO071238.xml
+28/02/26 19:44:54 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 19:44:54 - Boleto apagado: DANFE_071239.pdf
+28/02/26 19:44:54 - Boleto apagado: XML_071239.xml
+28/02/26 19:44:54 - Boleto apagado: XML_EVENTO_CANCELAMENTO071239.xml
+28/02/26 19:46:40 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 19:46:40 - Boleto apagado: DANFE_071240.pdf
+28/02/26 19:46:40 - Boleto apagado: XML_071240.xml
+28/02/26 19:46:40 - Boleto apagado: XML_EVENTO_CANCELAMENTO071240.xml
+28/02/26 19:48:25 - E-mail enviado com sucesso para mvidoy@hotmail.com
+28/02/26 19:48:25 - Boleto apagado: DANFE_071241.pdf
+28/02/26 19:48:25 - Boleto apagado: XML_071241.xml
+28/02/26 19:48:25 - Boleto apagado: XML_EVENTO_CANCELAMENTO071241.xml
+01/03/26 14:49:29 - E-mail enviado com sucesso para mvidoy@hotmail.com
+01/03/26 14:49:29 - Boleto apagado: DANFE_071243.pdf
+01/03/26 14:49:29 - Boleto apagado: XML_071243.xml
+01/03/26 14:49:29 - Boleto apagado: XML_EVENTO_CANCELAMENTO071243.xml
+02/03/26 10:43:19 - E-mail enviado com sucesso para mvidoy@hotmail.com
+02/03/26 10:43:19 - Boleto apagado: DANFE_071244.pdf
+02/03/26 10:43:19 - Boleto apagado: XML_071244.xml
+02/03/26 10:43:19 - Boleto apagado: XML_EVENTO_CANCELAMENTO071244.xml

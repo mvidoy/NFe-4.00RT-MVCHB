@@ -1,0 +1,78 @@
+package com.md1.backend.models;
+
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import org.hibernate.annotations.DynamicUpdate;
+
+@Entity
+@Table(name = "cclasstrib_ibscbs")
+@DynamicUpdate(false)
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "CCLASSTRIB_IBSCBS.findAll", query = "SELECT c FROM CCLASSTRIB_IBSCBS c ORDER BY c.CLASS_CODIGO ASC"),
+    @NamedQuery(name = "CCLASSTRIB_IBSCBS.findByCodigo", query = "SELECT c FROM CCLASSTRIB_IBSCBS c WHERE c.CLASS_CODIGO = :CLASS_CODIGO")
+})
+public class CCLASSTRIB_IBSCBS implements Serializable {
+
+    @Id
+    private String CLASS_CODIGO;
+    private String CLASS_DESCRICAO;
+    private String CLASS_LC;
+    private String CLASS_LCREDACAO;
+    private Date CLASS_DINIVIG;
+    private Date CLASS_DFIMVIG;
+
+    public String getCLASS_CODIGO() {
+        return CLASS_CODIGO;
+    }
+
+    public void setCLASS_CODIGO(String CLASS_CODIGO) {
+        this.CLASS_CODIGO = CLASS_CODIGO;
+    }
+
+    public String getCLASS_DESCRICAO() {
+        return CLASS_DESCRICAO;
+    }
+
+    public void setCLASS_DESCRICAO(String CLASS_DESCRICAO) {
+        this.CLASS_DESCRICAO = CLASS_DESCRICAO;
+    }
+
+    public String getCLASS_LC() {
+        return CLASS_LC;
+    }
+
+    public void setCLASS_LC(String CLASS_LC) {
+        this.CLASS_LC = CLASS_LC;
+    }
+
+    public String getCLASS_LCREDACAO() {
+        return CLASS_LCREDACAO;
+    }
+
+    public void setCLASS_LCREDACAO(String CLASS_LCREDACAO) {
+        this.CLASS_LCREDACAO = CLASS_LCREDACAO;
+    }
+
+    public Date getCLASS_DINIVIG() {
+        return CLASS_DINIVIG;
+    }
+
+    public void setCLASS_DINIVIG(Date CLASS_DINIVIG) {
+        this.CLASS_DINIVIG = CLASS_DINIVIG;
+    }
+
+    public Date getCLASS_DFIMVIG() {
+        return CLASS_DFIMVIG;
+    }
+
+    public void setCLASS_DFIMVIG(Date CLASS_DFIMVIG) {
+        this.CLASS_DFIMVIG = CLASS_DFIMVIG;
+    }
+}

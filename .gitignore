@@ -1,0 +1,34 @@
+# NetBeans build output
+build/
+dist/
+*.class
+
+# NetBeans private settings (user-specific)
+nbproject/private/
+
+# Arquivos de merge
+*.orig
+
+# Arquivos temporarios do NetBeans
+nbproject/build-impl.xml
+
+# Logs
+*.log
+
+# Arquivos de configuracao local
+local.properties
+
+# Claude Code (configuracao local)
+.claude/
+.jacocoverage/
+/REFORMA_TRIBUTARIA/Calculadora/calculadora/codigo-fonte-backend/target/
+
+# Arquivos grandes — excluídos do git (>50MB, GitHub não aceita)
+REFORMA_TRIBUTARIA/Calculadora/calculadora.tar.gz
+REFORMA_TRIBUTARIA/Calculadora/calculadora.zip
+REFORMA_TRIBUTARIA/calculadora-jar.zip
+REFORMA_TRIBUTARIA/calculadora-jar/
+lib/api-regime-geral.jar
+
+# Arquivos .bak
+*.bak

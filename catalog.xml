@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+<system systemId="http://www.nfe.fazenda.gov.br/portal?WSDL" uri="xml-resources/web-service-references/portal/wsdl/www.nfe.fazenda.gov.br/portal.wsdl"/>
+    <system systemId="file:/C:/certificados/NfeStatusServico.wsdl" uri="xml-resources/web-service-references/NfeStatusServico/wsdl/NfeStatusServico.wsdl"/>
+    <system systemId="file:/E:/downloads/WSDL_SP/WSDL_SP/homologacao/NfeStatusServico.wsdl" uri="xml-resources/web-service-references/NfeStatusServico_1/wsdl/NfeStatusServico.wsdl"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeRecepcao.wsdl" uri="xml-resources/web-service-references/NfeRecepcao_3/wsdl/NfeRecepcao.wsdl"/>
+    <system systemId="file:/E:/Desenv/JavaProject/nfe/WSDL_SP/homologacao/NfeConsulta.wsdl" uri="xml-resources/web-service-references/NfeConsulta/wsdl/NfeConsulta.wsdl"/>
+    <system systemId="file:/E:/Desenv/JavaProject/nfe/WSDL_SP/homologacao/NfeRecepcao.wsdl" uri="xml-resources/web-service-references/NfeRecepcao/wsdl/NfeRecepcao.wsdl"/>
+    <system systemId="file:/C:/nfe/schemas/nfe_v1.10.xsd" uri="xml-resources/jaxb/nfeshemas/nfe_v1.10.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/envinfe_v1.10.xsd" uri="xml-resources/jaxb/envinfe_v1_10/envinfe_v1.10.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/leiauteNFe_v1.10.xsd" uri="xml-resources/jaxb/envinfe_v1_10/leiauteNFe_v1.10.xsd"/>
+    <system systemId="file:/E:/desenv/javaproject/nfe/WSDL_SP/homologacao/NfeRetRecepcao.wsdl" uri="xml-resources/web-service-references/NfeRetRecepcao/wsdl/NfeRetRecepcao.wsdl"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeConsulta.wsdl" uri="xml-resources/web-service-references/NfeConsulta/wsdl/NfeConsulta.wsdl"/>
+    <system systemId="file:/C:/nfe/schemas/leiautecancnfe_v1.07.xsd" uri="xml-resources/jaxb/cancnfe_v1_071/leiautecancnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/conssitnfe_v1.07.xsd" uri="xml-resources/jaxb/conssitnfe_v1_07/conssitnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/leiauteConsSitNFe_v1.07.xsd" uri="xml-resources/jaxb/conssitnfe_v1_07/leiauteConsSitNFe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/inutnfe_v1.07.xsd" uri="xml-resources/jaxb/inutnfe_v1_07/inutnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/retinutnfe_v1.07.xsd" uri="xml-resources/jaxb/retinutnfe_v1_07/retinutnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/leiauteInutNFe_v1.07.xsd" uri="xml-resources/jaxb/retinutnfe_v1_07/leiauteInutNFe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeInutilizacao.wsdl" uri="xml-resources/web-service-references/NfeInutilizacao/wsdl/NfeInutilizacao.wsdl"/>
+    <system systemId="file:/C:/nfe/schemas/cancnfe_v1.07.xsd" uri="xml-resources/jaxb/cancnfe_v1_07/cancnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/retEnviNFe_v2.00.xsd" uri="xml-resources/jaxb/retEnviNFe/retEnviNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/cancNFe_v2.00.xsd" uri="xml-resources/jaxb/cancnfe/cancNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/inutNFe_v2.00.xsd" uri="xml-resources/jaxb/inutnfe/inutNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/consSitNFe_v2.00.xsd" uri="xml-resources/jaxb/conssitnfe/consSitNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/leiauteConsSitNFe_v2.00.xsd" uri="xml-resources/jaxb/conssitnfe/leiauteConsSitNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/retInutNFe_v2.00.xsd" uri="xml-resources/jaxb/retinutnfe/retInutNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/leiauteInutNFe_v2.00.xsd" uri="xml-resources/jaxb/retinutnfe/leiauteInutNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeCancelamento.wsdl" uri="xml-resources/web-service-references/NfeCancelamento/wsdl/NfeCancelamento.wsdl"/>
+    <system systemId="file:/C:/nfe/schemas/retcancnfe_v1.07.xsd" uri="xml-resources/jaxb/retCancNFe/retcancnfe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/leiauteCancNFe_v1.07.xsd" uri="xml-resources/jaxb/retCancNFe/leiauteCancNFe_v1.07.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/xmldsig-core-schema_v1.01.xsd" uri="xml-resources/jaxb/retCancNFe/xmldsig-core-schema_v1.01.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/tiposBasico_v1.02.xsd" uri="xml-resources/jaxb/retCancNFe/tiposBasico_v1.02.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/retCancNFe_v2.00.xsd" uri="xml-resources/jaxb/retCancNFe/retCancNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/leiauteCancNFe_v2.00.xsd" uri="xml-resources/jaxb/retCancNFe/leiauteCancNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_DPEC_101a/leiauteDPEC_v1.01.xsd" uri="xml-resources/jaxb/leiauteDPEC/leiauteDPEC_v1.01.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_DPEC_101a/xmldsig-core-schema_v1.01.xsd" uri="xml-resources/jaxb/leiauteDPEC/xmldsig-core-schema_v1.01.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/nfe_v2.00.xsd" uri="xml-resources/jaxb/nfe/nfe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/leiauteNFe_v2.00.xsd" uri="xml-resources/jaxb/nfe/leiauteNFe_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/xmldsig-core-schema_v1.01.xsd" uri="xml-resources/jaxb/nfe/xmldsig-core-schema_v1.01.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/retConsStatServ_v2.00.xsd" uri="xml-resources/jaxb/retconsstatserv/retConsStatServ_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/leiauteConsStatServ_v2.00.xsd" uri="xml-resources/jaxb/retconsstatserv/leiauteConsStatServ_v2.00.xsd"/>
+    <system systemId="file:/C:/nfe/schemas/PL_006c/tiposBasico_v1.03.xsd" uri="xml-resources/jaxb/retconsstatserv/tiposBasico_v1.03.xsd"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeStatusServico2.wsdl" uri="xml-resources/web-service-references/NfeStatusServico2/wsdl/NfeStatusServico2.wsdl"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/NfeStatusServico.wsdl" uri="xml-resources/web-service-references/NfeStatusServico/wsdl/NfeStatusServico.wsdl"/>
+    <system systemId="file:/C:/nfe/WSDL_SP/homologacao/nfeStatusServico2.wsdl" uri="xml-resources/web-service-references/nfeStatusServico2/wsdl/nfeStatusServico2.wsdl"/>
+    <system systemId="file:/C:/Desenv/JavaProject/NFe%203.10/wsdl/NfeStatusServico.wsdl" uri="xml-resources/web-service-references/NfeStatusServico/wsdl/NfeStatusServico.wsdl"/>
+    <system systemId="file:/C:/Desenv/JavaProject/NFe%203.10/wsdl/NfeConsultaCadastro.wsdl" uri="xml-resources/web-service-references/NfeConsultaCadastro/wsdl/NfeConsultaCadastro.wsdl"/>
+</catalog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
