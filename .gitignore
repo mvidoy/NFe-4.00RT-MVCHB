@@ -29,6 +29,7 @@ REFORMA_TRIBUTARIA/Calculadora/calculadora.zip
 REFORMA_TRIBUTARIA/calculadora-jar.zip
 REFORMA_TRIBUTARIA/calculadora-jar/
 lib/api-regime-geral.jar
+lib/calculadora.jar
 
 # Arquivos .bak
 *.bak
